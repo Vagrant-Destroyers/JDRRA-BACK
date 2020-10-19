@@ -1,0 +1,19 @@
+{
+  "name": "LinkedInScraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scraper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Aquí va el link del repo final :3"
+  },
+  "keywords": [],
+  "author": "Victor Paz: Vagrant Destroyers",
+  "license": "ISC",
+  "dependencies": {
+    "linkedin-jobs-scraper": "^4.0.2"
+  }
+}
