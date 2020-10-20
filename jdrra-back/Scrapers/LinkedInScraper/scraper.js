@@ -23,13 +23,14 @@ const {
 
   // Listen for custom events
   scraper.on(events.scraper.data, (data) => {
-    // const tBack = require('../techs').match_techs_back;
-    // const tFront = require('../techs').match_techs_high;
-    // const tDev = require('../techs').match_techs_dev;
-
-    // tBack(data.description);
-    // tFront(data.description);
-    // tDev(data.description);
+    const Techs = require('../techs');
+  
+    let jbtechs = Techs.tBack(data.description);
+    let bcheck = Techs.Bchecker(data.description);
+    let jftechs = Techs.tFront(data.description);
+    let fcheck = Techs.Fchecker(data.description);
+    let jdtechs = Techs.tDev(data.description);
+    let dcheck = Techs.Dchecker(data.description);
 
     res.table.push({
       query: data.query,
@@ -39,6 +40,12 @@ const {
       place: data.place,
       date: data.date,
       description: data.description,
+      jobBackTechs: jbtechs,
+      techTypeBack: bcheck,
+      jobFrontTechs: jftechs,
+      techTypeFront: fcheck,
+      jobDevopsTechs: jdtechs,
+      techTypeDevops: dcheck,
       link: data.link,
       senorityLevel: data.senorityLevel,
       jobFunction: data.jobFunction,
