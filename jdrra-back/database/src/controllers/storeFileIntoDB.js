@@ -17,7 +17,7 @@ const pool = new Pool({
 
 const storeFileIntoDB = async (res, req) => {
   try {
-    const rawdata = fs.readFileSync('../Scrapers/LinkedInScraper/data.json');
+    const rawdata = fs.readFileSync('/var/www/vagrantdestroyers.fun/html/JDRRA-BACK/jdrra-back/Scrapers/LinkedInScraper/data.json');
     const jobs = JSON.parse(rawdata);
 
     for (const job of jobs) {
