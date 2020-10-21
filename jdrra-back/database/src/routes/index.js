@@ -3,6 +3,8 @@
 const { Router } = require('express');
 const router = Router();
 
+/* init */
+const { getinit } = require('../controllers/init')
 /*users */
 const { getusers, createuser, getuserbyid, updateuser, deleteuser, deleteallusers } = require('../controllers/users');
 /*admins */
@@ -17,6 +19,9 @@ const { getjobpost, getjobpostbyid, createjobpost, updatejobpost, deletejobpost,
 const { storeFileIntoDB } = require('../controllers/storeFileIntoDB');
 /* search by date */
 const { createvoteup, createvotedown, mostvotes, downvotes } = require('../controllers/votes');
+
+/* init */
+router.get('/', getinit);
 
 /*users */
 router.get('/users', getusers);
