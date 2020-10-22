@@ -19,6 +19,8 @@ const { getjobpost, getjobpostbyid, createjobpost, updatejobpost, deletejobpost,
 const { storeFileIntoDB } = require('../controllers/storeFileIntoDB');
 /* search by date */
 const { createvoteup, createvotedown, mostvotes, downvotes } = require('../controllers/votes');
+/* browser */
+const { getsearchBack, getsearchFront, getsearchbytext } = require('../controllers/browser');
 
 /* init */
 router.get('/', getinit);
@@ -71,5 +73,10 @@ router.put('/voteup/:id', createvoteup);
 router.put('/votedown/:id', createvotedown);
 router.get('/mostvotes', mostvotes);
 router.get('/downvotes', downvotes);
+
+/* browser */
+router.get('/browser/back', getsearchBack);
+router.get('/browser/front', getsearchFront);
+router.get('/browser/back+front', getsearchbytext);
 
 module.exports = router;
