@@ -29,12 +29,12 @@ const createvotedown = async (req, res) => {
 };
 
 const mostvotes = async (req, res) => {
-  const response =  await pool.query('SELECT title, location, company, date, link, senorityLevel, place, jobFunction, employmenttype, industries, description, voteup FROM jobpost WHERE voteup > 10 ORDER BY voteup DESC;');
+  const response =  await pool.query('SELECT * FROM jobpost WHERE voteup > 10 ORDER BY voteup DESC LIMIT 10;');
   res.json(response.rows);
 };
 
 const downvotes = async (req, res) => {
-  const response =  await pool.query('SELECT title, location, company, date, link, senorityLevel, place, jobFunction, employmenttype, industries, description, votedown FROM jobpost WHERE votedown > 10 ORDER BY votedown DESC;');
+  const response =  await pool.query('SELECT * FROM jobpost WHERE votedown > 10 ORDER BY votedown DESC LIMIT 10;');
   res.json(response.rows);
 };
 
