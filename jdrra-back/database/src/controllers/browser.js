@@ -27,8 +27,26 @@ const getsearchbytext = async (req, res) => {
   res.json(response.rows);
 };
 
+const getsearchTypeBack = async (req, res) => {
+  const response = await pool.query('SELECT * FROM jobpost WHERE techTypeBack = true');
+  res.json(response.rows)
+};
+
+const getsearchTypeFront = async (req, res) => {
+  const response = await pool.query('SELECT * FROM jobpost WHERE techTypeFront = true');
+  res.json(response.rows)
+};
+
+const getsearchTypeDevops = async (req, res) => {
+  const response = await pool.query('SELECT * FROM jobpost WHERE techTypeDevops = true');
+  res.json(response.rows)
+};
+
 module.exports = {
   getsearchBack,
   getsearchFront,
-  getsearchbytext
+  getsearchbytext,
+  getsearchTypeBack,
+  getsearchTypeFront,
+  getsearchTypeDevops
 };
