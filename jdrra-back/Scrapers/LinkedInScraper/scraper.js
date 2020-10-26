@@ -97,7 +97,8 @@ const {
         descriptionFn: descriptionFn,
         filters: {
           relevance: ERelevanceFilterOptions.RELEVANT,
-          time: ETimeFilterOptions.MONTH
+          time: ETimeFilterOptions.MONTH,
+          experience: [experienceLevelFilter.INTERNSHIP, experienceLevelFilter.ENTRY_LEVEL, experienceLevelFilter.ASSOCIATE]
         }
       }
     })
