@@ -3,6 +3,7 @@ const {
   LinkedinScraper,
   ERelevanceFilterOptions,
   ETimeFilterOptions,
+  EExperienceLevelOptions,
   events
 } = require('linkedin-jobs-scraper');
 
@@ -98,7 +99,7 @@ const {
         filters: {
           relevance: ERelevanceFilterOptions.RELEVANT,
           time: ETimeFilterOptions.MONTH,
-          experience: [experienceLevelFilter.INTERNSHIP, experienceLevelFilter.ENTRY_LEVEL, experienceLevelFilter.ASSOCIATE]
+          experience: [EExperienceLevelOptions.INTERNSHIP, EExperienceLevelOptions.ENTRY_LEVEL, EExperienceLevelOptions.ASSOCIATE]
         }
       }
     })
