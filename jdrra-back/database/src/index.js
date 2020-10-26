@@ -3,6 +3,7 @@
 
 /* import express */
 const express = require('express');
+const port = 9000
 
 /* eject express */
 const app = express();
@@ -13,6 +14,6 @@ app.use(express.json());
 /* routes */
 app.use(require('../src/routes/index'));
 
-/* listen server on port 9000 */
-app.listen(9000);
-console.log('server rum on port 9000')
+/* listen server on port */
+app.listen(port);
+console.log(`server rum on port: ${port}`)

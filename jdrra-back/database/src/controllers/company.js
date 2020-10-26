@@ -6,10 +6,10 @@ const { Pool } = require('pg');
 
 /* connection with the database */
 const pool = new Pool({
-  host: 'localhost',
+  host: '35.231.149.59',
   user: 'postgres',
   database: 'databaseapp',
-  password: 'root'
+  password: 'c6aMCF5prn04vb0H'
 });
 
 const getcompany = async (req, res) => {

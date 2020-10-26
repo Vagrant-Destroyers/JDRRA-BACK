@@ -1,5 +1,5 @@
 # JDRRA-BACK
------
+-------
 
 /database
   * DatabaseApp.sql
@@ -10,7 +10,7 @@
       * /cotrollers
         * admins.js
         * company.js
-        * joppost.js
+        * jobpost.js
         * storeFileintoDB.js
         * user.js
         * votes.js
@@ -21,10 +21,14 @@
   * README
 
 /Scrapers
-  * data.json
-  * scraper.js
+  * tech.js
   * package.json
   * package-lock.json
+  * /LinkedInScraper
+      * data.json
+      * package.json
+      * package-lock.json
+      * scraper.js
 
 README
 

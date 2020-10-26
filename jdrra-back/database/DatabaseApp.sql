@@ -54,6 +54,12 @@ CREATE TABLE IF NOT EXISTS jobpost (
                             industries TEXT,
                             scrapperId INT GENERATED ALWAYS AS IDENTITY NOT NULL,
                             description TEXT,
+                            jobBackTechs TEXT[],
+                            techTypeBack BOOLEAN,
+                            jobFrontTechs TEXT[],
+                            techTypeFront BOOLEAN,
+                            jobDevopsTechs TEXT[],
+                            techTypeDevops BOOLEAN,
                             voteup INT,
                             votedown INT);
 

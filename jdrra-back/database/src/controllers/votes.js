@@ -6,10 +6,10 @@ const { Pool } = require('pg');
 
 /* connection with the database */
 const pool = new Pool({
-  host: 'localhost',
+  host: '35.231.149.59',
   user: 'postgres',
   database: 'databaseapp',
-  password: 'root'
+  password: 'c6aMCF5prn04vb0H'
 });
 
 const createvoteup = async (req, res) => {
@@ -29,12 +29,12 @@ const createvotedown = async (req, res) => {
 };
 
 const mostvotes = async (req, res) => {
-  const response =  await pool.query('SELECT title, location, company, date, link, senorityLevel, place, jobFunction, employmenttype, industries, description, voteup FROM jobpost WHERE voteup > 10 ORDER BY voteup DESC;');
+  const response =  await pool.query('SELECT * FROM jobpost WHERE voteup > 10 ORDER BY voteup DESC LIMIT 10;');
   res.json(response.rows);
 };
 
 const downvotes = async (req, res) => {
-  const response =  await pool.query('SELECT title, location, company, date, link, senorityLevel, place, jobFunction, employmenttype, industries, description, votedown FROM jobpost WHERE votedown > 10 ORDER BY votedown DESC;');
+  const response =  await pool.query('SELECT * FROM jobpost WHERE votedown > 10 ORDER BY votedown DESC LIMIT 10;');
   res.json(response.rows);
 };
 

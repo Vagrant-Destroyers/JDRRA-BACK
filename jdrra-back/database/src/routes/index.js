@@ -3,6 +3,8 @@
 const { Router } = require('express');
 const router = Router();
 
+/* init */
+const { getinit } = require('../controllers/init')
 /*users */
 const { getusers, createuser, getuserbyid, updateuser, deleteuser, deleteallusers } = require('../controllers/users');
 /*admins */
@@ -17,6 +19,11 @@ const { getjobpost, getjobpostbyid, createjobpost, updatejobpost, deletejobpost,
 const { storeFileIntoDB } = require('../controllers/storeFileIntoDB');
 /* search by date */
 const { createvoteup, createvotedown, mostvotes, downvotes } = require('../controllers/votes');
+/* browser */
+const { getsearchBack, getsearchFront, getsearchbytext, getsearchTypeBack, getsearchTypeFront, getsearchTypeDevops } = require('../controllers/browser');
+
+/* init */
+router.get('/', getinit);
 
 /*users */
 router.get('/users', getusers);
@@ -66,5 +73,13 @@ router.put('/voteup/:id', createvoteup);
 router.put('/votedown/:id', createvotedown);
 router.get('/mostvotes', mostvotes);
 router.get('/downvotes', downvotes);
+
+/* browser */
+router.get('/browser/back', getsearchBack);
+router.get('/browser/front', getsearchFront);
+router.get('/browser/back+front', getsearchbytext);
+router.get('/browser/BackTechs', getsearchTypeBack);
+router.get('/browser/FrontTechs', getsearchTypeFront);
+router.get('/browser/DevopsTechs', getsearchTypeDevops);
 
 module.exports = router;
