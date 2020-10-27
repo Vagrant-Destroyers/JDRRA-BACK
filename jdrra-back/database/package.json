@@ -11,15 +11,16 @@
   "author": "Ricardo Camayo: Vagrant Destroyers",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mariadb": "^2.4.2",
     "mysql2": "^2.2.5",
     "pg": "^8.3.3",
     "pg-hstore": "^2.3.3",
+    "pm2": "^4.5.0",
     "sequelize": "^6.3.5",
     "sqlite3": "^5.0.0",
-    "tedious": "^9.2.1",
-    "pm2": "^4.5.0"
+    "tedious": "^9.2.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
