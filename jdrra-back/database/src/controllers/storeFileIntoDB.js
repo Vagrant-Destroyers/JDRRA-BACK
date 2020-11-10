@@ -14,7 +14,9 @@ const pool = new Pool({
   password: 'c6aMCF5prn04vb0H'
 });
 
-
+/* function that reads the scraper and stores
+  it in the database, returns a json object with
+  the data obtained from the scraper */
 const storeFileIntoDB = async (res, req) => {
   try {
     const rawdata = fs.readFileSync('/var/www/vagrantdestroyers.fun/html/JDRRA-BACK/jdrra-back/Scrapers/LinkedInScraper/data.json');
@@ -30,6 +32,7 @@ const storeFileIntoDB = async (res, req) => {
   }
 };
 
+/* export functions */
 module.exports = {
   storeFileIntoDB
 };
